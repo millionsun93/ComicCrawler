@@ -39,7 +39,7 @@ public class Main {
         Elements links = doc.select(".list-truyen-item-wrap > h3 > a");
         links.forEach(element -> {
             try {
-                parseComic(element.attr("href"), element.text());
+                parseComic(element.attr("href"), element.text().trim());
             } catch (Exception e) {
                 e.printStackTrace();
             }
